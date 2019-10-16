@@ -62,6 +62,10 @@ import VueFaModal from 'vue-fa-modal'
 | hidden  | 关闭弹窗 |
 | submit  |   提交   |
 
+## DEMO
+
+[demo link](http://4ark.me/vue-fa-modal/demo/)
+
 ## Author
 
 > [Blog](https://4ark.me/) · GitHub [@gd4Ark](https://github.com/gd4Ark)
