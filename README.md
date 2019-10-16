@@ -70,7 +70,10 @@ import VueFaModal from 'vue-fa-modal'
 
 > [Blog](https://4ark.me/) · GitHub [@gd4Ark](https://github.com/gd4Ark)
 
+## License
+
+[MIT](./LICENSE)
+
 ## Conclusion
 
 If you think my project is good👏 . Give a Star⭐ encouragement.
-
