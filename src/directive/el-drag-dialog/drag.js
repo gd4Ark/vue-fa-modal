@@ -26,12 +26,10 @@ export default {
       const screenHeight = document.body.clientHeight
 
       const minDragDomLeft = dragDom.offsetLeft
-      const maxDragDomLeft =
-                screenWidth - dragDom.offsetLeft - dragDomWidth
+      const maxDragDomLeft = screenWidth - dragDom.offsetLeft - dragDomWidth
 
       const minDragDomTop = dragDom.offsetTop
-      const maxDragDomTop =
-                screenHeight - dragDom.offsetTop - dragDomHeight
+      const maxDragDomTop = screenHeight - dragDom.offsetTop - dragDomHeight
 
       // 获取到的值带px 正则匹配替换
       let styL = getStyle(dragDom, 'left')
@@ -39,11 +37,11 @@ export default {
 
       if (styL.includes('%')) {
         styL =
-                    Number(document.body.clientWidth) *
-                    (Number(styL.replace(/\%/g, '')) / 100)
+          Number(document.body.clientWidth) *
+          (Number(styL.replace(/\%/g, '')) / 100)
         styT =
-                    Number(document.body.clientHeight) *
-                    (Number(styT.replace(/\%/g, '')) / 100)
+          Number(document.body.clientHeight) *
+          (Number(styT.replace(/\%/g, '')) / 100)
       } else {
         styL = Number(styL.replace(/\px/g, ''))
         styT = Number(styT.replace(/\px/g, ''))
@@ -68,8 +66,7 @@ export default {
         }
 
         // 移动当前元素
-        dragDom.style.cssText += `;left:${left + styL}px;top:${top +
-                    styT}px;`
+        dragDom.style.cssText += `;left:${left + styL}px;top:${top + styT}px;`
 
         // emit onDrag event
         vnode.child.$emit('dragDialog')
@@ -80,5 +77,5 @@ export default {
         document.onmouseup = null
       }
     }
-  }
+  },
 }

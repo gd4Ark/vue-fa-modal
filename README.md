@@ -69,3 +69,4 @@ import VueFaModal from 'vue-fa-modal'
 ## Conclusion
 
 If you think my project is good👏 . Give a Star⭐ encouragement.
+
