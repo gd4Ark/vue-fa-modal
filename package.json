@@ -1,12 +1,16 @@
 {
   "name": "vue-fa-modal",
-  "version": "0.0.24",
+  "version": "0.1.0",
   "description": "A Modal Component for Vue.js and Element-UI",
   "author": "gd4ark <gd.4ark@gmail.com>",
   "main": "dist/vue-fa-modal.min.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --hide-modules",
     "dev": "NODE_ENV=development webpack-dev-server --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gd4Ark/vue-fa-modal.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
