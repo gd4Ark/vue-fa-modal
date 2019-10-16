@@ -2,20 +2,17 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-fa-modal.min.js',
-    library: 'VueFaModal',
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
+    filename: 'build.js',
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader'],
+        use: ['vue-style-loader', 'style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
@@ -50,6 +47,13 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]',
+        },
+      },
+      {
+        test: /\.(eot|woff|woff2|ttf)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]',

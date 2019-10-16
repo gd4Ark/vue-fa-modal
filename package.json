@@ -1,14 +1,12 @@
 {
   "name": "vue-fa-modal",
-  "version": "0.0.1",
+  "version": "0.0.23",
   "description": "A Modal Component for Vue.js and Element-UI",
   "author": "gd4ark <gd.4ark@gmail.com>",
+  "main": "dist/vue-fa-modal.min.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --hide-modules",
     "dev": "NODE_ENV=development webpack-dev-server --open --hot"
-  },
-  "dependencies": {
-    "vue": "^2.5.11"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -17,6 +15,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "vue": "^2.5.11",
     "eslint": "^5.16.0",
     "eslint-config-fa": "0.0.8",
     "eslint-plugin-vue": "^5.2.3",

@@ -7,17 +7,17 @@
          @click="visible">
       <slot v-if="needOpenBtn"
             name="btn">
-        <el-button :size="btnSize"
-                   :type="btnType"
-                   :icon="btnIcon"
-                   :style="btnStyle"
+        <el-button :size="openBtnSize"
+                   :type="openBtnType"
+                   :icon="openBtnIcon"
+                   :style="openBtnStyle"
                    :disabled="disabled"
                    class="open-btn">
           {{ openBtnText }}
         </el-button>
       </slot>
     </div>
-    <el-dialog v-el-drag-dialog
+    <el-dialog :v-el-drag-dialog="needDrag"
                :title="title"
                :visible.sync="dialogVisible"
                :append-to-body="appendToBody"
@@ -34,7 +34,7 @@
           <el-button :size="otherBtnSize"
                      @click="hidden">{{ cancelBtnText }}</el-button>
           <slot name="footer-middle"></slot>
-          <el-button :disabled="btnDisabled"
+          <el-button :disabled="submitDisabled"
                      :size="otherBtnSize"
                      type="primary"
                      @click="submit">{{ submitBtnText }}</el-button>
@@ -48,7 +48,9 @@
 import elDragDialog from './directive/el-drag-dialog'
 export default {
   name: 'FaModal',
-  directives: { elDragDialog },
+  directives: {
+    elDragDialog
+  },
   props: {
     title: {
       type: String,
@@ -70,7 +72,7 @@ export default {
       type: Boolean,
       default: true
     },
-    btnDisabled: {
+    submitDisabled: {
       type: Boolean,
       default: false
     },
@@ -90,7 +92,7 @@ export default {
       type: String,
       default: '取消'
     },
-    btnSize: {
+    openBtnSize: {
       type: String,
       default: 'small'
     },
@@ -98,15 +100,15 @@ export default {
       type: String,
       default: ''
     },
-    btnType: {
+    openBtnType: {
       type: String,
       default: ''
     },
-    btnIcon: {
+    openBtnIcon: {
       type: String,
       default: ''
     },
-    btnStyle: {
+    openBtnStyle: {
       type: Object,
       default: () => {
         return {}
@@ -144,6 +146,11 @@ export default {
 <style lang="scss">
 @import './styles/_variables';
 @import './styles/_mixins';
+
+html,
+body {
+  @include wh(100%);
+}
 
 .el-dialog__wrapper {
   @include sub-center;
