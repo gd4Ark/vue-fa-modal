@@ -1,12 +1,9 @@
 <template>
-  <div class="modal"
-       style="display:inline;">
-    <slot name="custom-open-area"
-          :visible="visible"></slot>
-    <div style="display:inline;"
+  <div class="modal inline">
+    <div class="inline"
          @click="visible">
       <slot v-if="needOpenBtn"
-            name="btn">
+            name="open-btn">
         <el-button :size="openBtnSize"
                    :type="openBtnType"
                    :icon="openBtnIcon"
@@ -17,28 +14,41 @@
         </el-button>
       </slot>
     </div>
-    <el-dialog :v-el-drag-dialog="needDrag"
+    <el-dialog v-el-drag-dialog
+               v-bind="$attrs"
                :title="title"
                :visible.sync="dialogVisible"
-               :append-to-body="appendToBody"
-               width="95%"
-               @open="open"
-               @close="close">
-      <slot name="body" />
+               :width="width"
+               v-on="$listeners">
+      <template slot="title">
+        <slot name="title">
+          <span class="el-dialog__title">{{ title }}</span>
+        </slot>
+      </template>
+
+      <slot />
 
       <span v-if="needFooter"
             slot="footer"
             class="dialog-footer">
         <slot name="footer">
           <slot name="footer-prepend"></slot>
+
           <el-button :size="otherBtnSize"
-                     @click="hidden">{{ cancelBtnText }}</el-button>
+                     @click="hidden">
+            {{ cancelBtnText }}
+          </el-button>
+
           <slot name="footer-middle"></slot>
+
           <el-button :disabled="submitDisabled"
                      :size="otherBtnSize"
                      type="primary"
-                     @click="submit">{{ submitBtnText }}</el-button>
+                     @click="submit">
+            {{ submitBtnText }}
+          </el-button>
           <slot name="footer-prepend"></slot>
+
         </slot>
       </span>
     </el-dialog>
@@ -56,13 +66,13 @@ export default {
       type: String,
       default: '弹窗'
     },
+    width: {
+      type: String,
+      default: '95%'
+    },
     disabled: {
       type: Boolean,
       default: false
-    },
-    needDrag: {
-      type: Boolean,
-      default: true
     },
     needOpenBtn: {
       type: Boolean,
@@ -76,13 +86,9 @@ export default {
       type: Boolean,
       default: false
     },
-    appendToBody: {
-      type: Boolean,
-      default: false
-    },
     openBtnText: {
       type: String,
-      default: '打开弹框'
+      default: '打开弹窗'
     },
     submitBtnText: {
       type: String,
@@ -131,12 +137,6 @@ export default {
     hidden() {
       this.dialogVisible = false
     },
-    open() {
-      this.$emit('open')
-    },
-    close() {
-      this.$emit('close')
-    },
     submit() {
       this.$emit('submit')
     }
@@ -182,6 +182,9 @@ body {
 }
 </style>
 <style lang="scss" scoped>
+.inline {
+  display: inline;
+}
 .open-btn {
   margin-left: 10px;
 }

@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <h2>基本使用</h2>
+    <h2>基本使用</h2>
     <vue-fa-modal ref="fa-modal-1"
+                  width="100%"
                   open-btn-text="点击我"
-                  title="弹窗标题"
-                  @submit="submit">
-      <div slot="body">
-        内容
-      </div>
+                  title="123"
+                  @submit="submit"
+                  @open="open">
+
     </vue-fa-modal>
-    <h2>更复杂的使用</h2>
+    <h2>更复杂的使用</h2>
     <vue-fa-modal ref="fa-modal-2"
                   title="弹窗标题"
                   open-btn-text="点击我更新"
@@ -38,6 +38,9 @@ export default {
     btnDisabled: false
   }),
   methods: {
+    open() {
+      console.log('open')
+    },
     submit() {
       this.$message({
         type: 'success',
