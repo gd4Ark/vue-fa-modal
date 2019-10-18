@@ -57,7 +57,7 @@
 <script>
 import elDragDialog from './directive/el-drag-dialog'
 export default {
-  name: 'FaModal',
+  name: 'VueFaModal',
   directives: {
     elDragDialog
   },

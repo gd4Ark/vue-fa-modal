@@ -1,12 +1,14 @@
 {
   "name": "vue-fa-modal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Modal Component for Vue.js and Element-UI",
   "author": "gd4ark <gd.4ark@gmail.com>",
   "main": "dist/vue-fa-modal.min.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot"
+    "win:build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "win:dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "NODE_ENV=production webpack --progress --hide-modules",
+    "dev": "NODE_ENV=development webpack-dev-server --open --hot"
   },
   "repository": {
     "type": "git",
