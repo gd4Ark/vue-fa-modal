@@ -1,4 +1,8 @@
 # vue-fa-modal
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82df5109eadc43638ae23bcda9602b74)](https://www.codacy.com/manual/gd4Ark/vue-fa-modal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gd4Ark/vue-fa-modal&amp;utm_campaign=Badge_Grade)
+[![npm](https://img.shields.io/npm/v/vue-fa-modal)](https://www.npmjs.com/package/vue-fa-modal)
+[![npm](https://img.shields.io/npm/dm/vue-fa-modal)](https://www.npmjs.com/package/vue-fa-modal)
+[![NPM](https://img.shields.io/npm/l/vue-fa-modal)](https://github.com/gd4Ark/vue-fa-modal/blob/master/LICENSE)
 
 一个基于 Vue.js 与 Element-UI 的简单弹窗组件
 
