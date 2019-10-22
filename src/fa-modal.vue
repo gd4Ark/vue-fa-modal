@@ -41,7 +41,7 @@
 
           <slot name="footer-middle"></slot>
 
-          <el-button :disabled="submitDisabled"
+          <el-button :loading="btnLoading"
                      :size="otherBtnSize"
                      type="primary"
                      @click="submit">
@@ -82,7 +82,7 @@ export default {
       type: Boolean,
       default: true
     },
-    submitDisabled: {
+    btnLoading: {
       type: Boolean,
       default: false
     },
@@ -158,8 +158,6 @@ body {
 
 .el-dialog {
   @include flex-column;
-  max-width: $dialog-max-width;
-  max-height: $dialog-max-height;
   margin: 0 !important;
 }
 

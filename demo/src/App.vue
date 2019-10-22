@@ -7,7 +7,9 @@
                   title="123"
                   @submit="submit"
                   @open="open">
-
+      <div>
+        内容
+      </div>
     </vue-fa-modal>
     <h2>更复杂的使用</h2>
     <vue-fa-modal ref="fa-modal-2"
@@ -19,9 +21,9 @@
                   other-btn-size="mini"
                   submit-btn-text="更新"
                   :need-drag="false"
-                  :submit-disabled="btnDisabled"
+                  :btn-loading="loading"
                   @submit="submit2">
-      <div slot="body">
+      <div>
         内容
       </div>
     </vue-fa-modal>
@@ -35,7 +37,7 @@ export default {
     VueFaModal
   },
   data: () => ({
-    btnDisabled: false
+    loading: false
   }),
   methods: {
     open() {
@@ -49,16 +51,22 @@ export default {
       this.$refs['fa-modal-1'].hidden()
     },
     submit2() {
-      this.btnDisabled = true
+      this.loading = true
       setTimeout(() => {
         this.$message({
           type: 'success',
           message: '提交成功'
         })
         this.$refs['fa-modal-2'].hidden()
-        this.btnDisabled = false
+        this.loading = false
       }, 1000)
     }
   }
 }
 </script>
+<style lang="scss">
+.el-dialog__wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+</style>

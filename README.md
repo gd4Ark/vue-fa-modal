@@ -32,23 +32,23 @@ import VueFaModal from 'vue-fa-modal'
 
 ## 参数
 
-|      名称      | 必填 |   类型   |  默认值  |               描述                |
-| :------------: | :--: | :------: | :------: | :-------------------------------: |
-|     title      |      |  String  |   弹窗   |            弹窗的标题             |
-|     width      |      |  String  |   95%    |             弹窗宽度              |
-|    disabled    |      | Boolean  |  false   |  禁用打开按钮、禁用 visible 事件  |
-|  needOpenBtn   |      | Boolean  |   true   |           启用打开按钮            |
-|   needFooter   |      | Boolean  |   true   |         启用弹窗底部按钮          |
-| submitDisabled |      | Boolean  |  false   |           禁用提交按钮            |
-|  openBtnText   |      |  String  | 打开弹窗 |          打开按钮的文字           |
-| submitBtnText  |      |  String  |   提交   |          提交按钮的文字           |
-| cancelBtnText  |      |  String  |   取消   |          取消按钮的文字           |
-|  openBtnSize   |      |  String  |  small   |          打开按钮的尺寸           |
-|  otherBtnSize  |      |  String  |    ’‘    |          其他按钮的尺寸           |
-|  openBtnType   |      |  String  |    ’‘    |          打开按钮的类型           |
-|  openBtnIcon   |      |  String  |    ’‘    |          打开按钮的图标           |
-|  openBtnStyle  |      |  Object  |    {}    |          打开按钮的样式           |
-|   beforeOpen   |      | Function |  空操作  | 打开按钮之前，返回 false 则不打开 |
+|     名称      | 必填 |   类型   |  默认值  |               描述                |
+| :-----------: | :--: | :------: | :------: | :-------------------------------: |
+|     title     |      |  String  |   弹窗   |            弹窗的标题             |
+|     width     |      |  String  |   95%    |             弹窗宽度              |
+|   disabled    |      | Boolean  |  false   |  禁用打开按钮、禁用 visible 事件  |
+|  needOpenBtn  |      | Boolean  |   true   |           启用打开按钮            |
+|  needFooter   |      | Boolean  |   true   |         启用弹窗底部按钮          |
+|  btnLoading   |      | Boolean  |  false   |         提交按钮加载动画          |
+|  openBtnText  |      |  String  | 打开弹窗 |          打开按钮的文字           |
+| submitBtnText |      |  String  |   提交   |          提交按钮的文字           |
+| cancelBtnText |      |  String  |   取消   |          取消按钮的文字           |
+|  openBtnSize  |      |  String  |  small   |          打开按钮的尺寸           |
+| otherBtnSize  |      |  String  |    ’‘    |          其他按钮的尺寸           |
+|  openBtnType  |      |  String  |    ’‘    |          打开按钮的类型           |
+|  openBtnIcon  |      |  String  |    ’‘    |          打开按钮的图标           |
+| openBtnStyle  |      |  Object  |    {}    |          打开按钮的样式           |
+|  beforeOpen   |      | Function |  空操作  | 打开按钮之前，返回 false 则不打开 |
 
 其他属性详见 Element-UI 文档：[链接](https://element.eleme.cn/#/zh-CN/component/dialog)
 
