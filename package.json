@@ -1,6 +1,6 @@
 {
   "name": "vue-fa-modal",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "A Modal Component for Vue.js and Element-UI",
   "author": "gd4ark <gd.4ark@gmail.com>",
   "main": "dist/vue-fa-modal.min.js",
