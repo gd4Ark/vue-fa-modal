@@ -1,5 +1,6 @@
 # vue-fa-modal
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82df5109eadc43638ae23bcda9602b74)](https://www.codacy.com/manual/gd4Ark/vue-fa-modal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gd4Ark/vue-fa-modal&amp;utm_campaign=Badge_Grade)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82df5109eadc43638ae23bcda9602b74)](https://www.codacy.com/manual/gd4Ark/vue-fa-modal?utm_source=github.com&utm_medium=referral&utm_content=gd4Ark/vue-fa-modal&utm_campaign=Badge_Grade)
 [![npm](https://img.shields.io/npm/v/vue-fa-modal)](https://www.npmjs.com/package/vue-fa-modal)
 [![npm](https://img.shields.io/npm/dm/vue-fa-modal)](https://www.npmjs.com/package/vue-fa-modal)
 [![NPM](https://img.shields.io/npm/l/vue-fa-modal)](https://github.com/gd4Ark/vue-fa-modal/blob/master/LICENSE)
@@ -15,7 +16,7 @@
 
 使用 npm 或者 yarn 进行安装
 
-``` bash
+```bash
 $ npm install vue-fa-modal
 $ yarn add vue-fa-modal
 ```
