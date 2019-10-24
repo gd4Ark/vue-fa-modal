@@ -85,7 +85,7 @@ import VueFaModal from 'vue-fa-modal'
 
 ## DEMO
 
-[demo link](http://4ark.me/vue-fa-modal/demo/)
+[demo link](http://4ark.me/vue-fa-modal)
 
 ## Author
 
