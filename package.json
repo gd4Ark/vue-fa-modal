@@ -1,7 +1,6 @@
 {
   "name": "vue-fa-modal",
-  "version": "0.2.0",
-  "private": true,
+  "version": "0.2.1",
   "description": "A Modal Component for Vue.js and Element-UI",
   "license": "MIT",
   "author": "gd4ark <gd.4ark@gmail.com>",
