@@ -1,16 +1,15 @@
 {
-  "name": "vue-fa-modal",
-  "version": "0.2.1",
-  "description": "A Modal Component for Vue.js and Element-UI",
-  "license": "MIT",
+  "name": "vue-fa-form",
+  "version": "0.0.39",
+  "description": "A JSON configuration Render form Component for Vue.js and Element-UI",
   "author": "gd4ark <gd.4ark@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "commit": "git-cz",
     "bootstrap": "yarn || npm i",
     "serve": "npm run bootstrap && vue-cli-service serve",
-    "build:lib": "npm run bootstrap && vue-cli-service build --target lib --name vue-fa-modal --dest ./dist/ ./lib/index.js",
-    "build:docs": "npm run bootstrap && vue-cli-service build",
-    "build": "npm run bootstrap && npm run lint & npm run build:lib && npm run build:docs",
+    "build:lib": "npm run bootstrap && vue-cli-service build --target lib --name vue-fa-form --dest ./dist/ ./lib/index.js",
+    "build": "npm run bootstrap && npm run lint & npm run build:lib",
     "lint": "eslint --ext .js,.vue ./",
     "lint-fix": "eslint --ext .js,.vue ./ --fix",
     "release": "standard-version",
@@ -18,17 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gd4Ark/vue-fa-modal.git"
+    "url": "https://github.com/gd4Ark/vue-fa-form.git"
   },
   "main": "lib/index.js",
-  "homepage": "https://github.com/gd4ark/vue-fa-modal",
+  "homepage": "https://github.com/gd4ark/vue-fa-form",
   "keywords": [
-    "vue-fa-modal",
-    "vue modal",
-    "element modal",
+    "vue-fa-form",
+    "vue form",
+    "element form",
     "element",
-    "element-ui modal",
-    "el-dialog"
+    "element-ui form",
+    "el-form"
   ],
   "lint-staged": {
     "./**/*.{js,vue}": [
@@ -37,11 +36,21 @@
     ]
   },
   "dependencies": {
-    "core-js": "^3.3.2",
     "vue": "^2.6.10",
-    "element-ui": "^2.11.1"
+    "element-ui": "^2.11.1",
+    "lodash.clone": "^4.5.0",
+    "lodash.get": "^4.4.2",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isempty": "^4.4.0",
+    "lodash.isequal": "^4.5.0",
+    "lodash.isnull": "^3.0.0",
+    "lodash.topath": "^4.5.2",
+    "vue-amap": "^0.5.10",
+    "vue-codemirror-lite": "^1.0.4",
+    "vue-fa-modal": "^0.2.1"
   },
   "devDependencies": {
+    "core-js": "^3.3.2",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
@@ -55,25 +64,12 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "css-loader": "^0.28.7",
+    "sass-resources-loader": "^2.0.0",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
     "standard-version": "^7.0.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
   },
   "postcss": {
     "plugins": {
