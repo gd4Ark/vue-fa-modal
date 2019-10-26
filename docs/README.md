@@ -1,10 +1,5 @@
 # vue-fa-form
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4443b617de9140e6b6fbd289d0f7ab08)](https://www.codacy.com/manual/gd4Ark/vue-fa-form?utm_source=github.com&utm_medium=referral&utm_content=gd4Ark/vue-fa-form&utm_campaign=Badge_Grade)
-[![npm](https://img.shields.io/npm/v/vue-fa-form)](https://www.npmjs.com/package/vue-fa-form)
-[![npm](https://img.shields.io/npm/dm/vue-fa-form)](https://www.npmjs.com/package/vue-fa-form)
-[![NPM](https://img.shields.io/npm/l/vue-fa-form)](https://github.com/gd4Ark/vue-fa-form/blob/master/LICENSE)
-
 一个基于 Vue.js 与 Element-UI 的表单构建组件
 
 特点：
@@ -30,7 +25,7 @@ import VueFaForm from 'vue-fa-form'
 ```html
 <template>
   <vue-fa-form
-    :form-item="formItems"
+    :form-items="formItems"
     :get-form-data="getFormData"
     @submit="submit"
   />
@@ -41,7 +36,7 @@ import VueFaForm from 'vue-fa-form'
 import VueFaForm from './vue-fa-form'
 export default {
   components: {
-    VueFaForm
+    VueFaForm,
   },
   data: () => ({
     formItems: [
@@ -53,22 +48,22 @@ export default {
           {
             required: true,
             trigger: 'blur',
-            message: '文本框必填'
-          }
-        ]
-      }
+            message: '文本框必填',
+          },
+        ],
+      },
       // ...
     ],
     getFormData: () => ({
-      text: ''
+      text: '',
       // ...
-    })
+    }),
   }),
   methods: {
     submit(data) {
       console.log(data)
-    }
-  }
+    },
+  },
 }
 ```
 

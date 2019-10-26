@@ -2,8 +2,17 @@ const path = require('path')
 const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   css: { extract: false },
-  outputDir: 'docs',
+  outputDir: 'example_dist',
   publicPath: isProd ? './' : '/',
+  css: {
+    extract: true,
+    sourceMap: false,
+    loaderOptions: {
+      sass: {
+        data: `@import "~lib/styles/_app.scss";`
+      }
+    }
+  },
   configureWebpack: {
     entry: './example/main.js',
     output: {
@@ -12,7 +21,8 @@ module.exports = {
     resolve: {
       // 设置别名
       alias: {
-        'vue-fa-modal': path.resolve(__dirname, './')
+        lib: path.resolve(__dirname, './lib'),
+        'vue-fa-form': path.resolve(__dirname, './lib')
       }
     }
   }

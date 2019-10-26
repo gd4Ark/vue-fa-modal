@@ -1,3 +1,30 @@
+# 快速上手
+
+本节将介绍如何在项目中使用 vue-fa-form。
+
+## 引入
+
+```js
+import VueFaForm from 'vue-fa-form'
+```
+
+## 使用
+
+```vue
+<vue-fa-form
+  :form-items="formItems"
+  :get-form-data="getFormData"
+  @submit="submit"
+/>
+```
+
+要构建一个表单，需要传入表单项`form-items`以及获取表单数据函数`get-form-data`。
+
+## 例子
+
+<vuep  template="#quick-start-example"></vuep>
+
+<script v-pre type="text/x-template" id="quick-start-example">
 <template>
   <vue-fa-form :form-items="formItems"
                :get-form-data="getFormData"
@@ -186,4 +213,5 @@ export default {
     }
   }
 }
+</script>
 </script>
