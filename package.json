@@ -1,6 +1,6 @@
 {
   "name": "vue-fa-form",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "description": "A JSON configuration Render form Component for Vue.js and Element-UI",
   "author": "gd4ark <gd.4ark@gmail.com>",
   "license": "MIT",
@@ -36,8 +36,6 @@
     ]
   },
   "dependencies": {
-    "vue": "^2.6.10",
-    "element-ui": "^2.11.1",
     "lodash.clone": "^4.5.0",
     "lodash.get": "^4.4.2",
     "lodash.isarray": "^4.0.0",
@@ -60,6 +58,8 @@
     "vue-template-compiler": "^2.6.10",
     "eslint-config-fa": "0.0.8",
     "husky": "^2.7.0",
+    "vue": "^2.6.10",
+    "element-ui": "^2.11.1",
     "lint-staged": "^9.4.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
